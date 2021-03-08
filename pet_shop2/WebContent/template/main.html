@@ -1,0 +1,115 @@
+<h4 class="display-4 " id="allShopping">All Shopping  :</h4>
+  <table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">User name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Product name</th>
+      <th scope="col">Product price</th>
+      <th scope="col">Product quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<c:forEach items="${allShoppping}" var="item">
+	    <tr>
+	      <th scope="row">${item.idUser}</th>
+	      <td>${item.username}</td>
+	      <td>${item.userEmail}</td>
+	      <td>${item.productName}</td>
+	      <td>${item.productPrice} $</td>
+	      <td>${item.productQuantity}</td>
+	    </tr>
+    </c:forEach>
+  </tbody>
+</table>
+  <hr>
+  <!-- Connected Users -->
+  <h4 class="display-4 mb-4" id="Connected-users">Connected Users :</h4>
+  <table class="table table-striped">
+  <thead class="thead-success">
+    <tr>
+      <th scope="col">Status</th>	
+      <th scope="col">ID</th>
+      <th scope="col">User name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Setting</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<c:forEach items="${connectedUsers}" var="user">
+	    <tr>
+	      <td scope="row"><img alt="" src="images/online.png"></td>
+	      <td >${user.idUser}</td>
+	      <td >${user.login}</td>
+	      <td >${user.email}</td>
+	      <td>
+	      	<form action="adminSetting" method="post" id="form${user.idUser}">
+	      		<input type="hidden" name="input" value="${user.idUser}">
+	      		<button name="show" class="btn btn-info"  onclick='document.getElementById("form${ user.idUser }").submit();'>Show Details</button>
+	      		<c:choose>
+	      			<c:when test="${user.blocked==0}">
+	      				<button name="block" class="btn btn-danger" onclick='document.getElementById("form${user.idUser}").submit();'>Block </button>
+	      			</c:when>
+	      			<c:when test="${user.blocked!=0}">
+	      				<button name="restart" class="btn btn-success"  onclick='document.getElementById("form${ user.idUser}").submit();'>Restart</button>
+	      			</c:when>
+	      		</c:choose>    		
+	      	</form>
+	      </td>
+	    </tr>
+    </c:forEach>
+  </tbody>
+</table>  
+  <!-- End connected Users -->
+  
+  <!-- All users  -->
+
+	<hr>
+ <h4 class="display-4 mb-4" id="All-users">All Users :</h4>
+  <table class="table table-striped">
+  <thead class="thead-success">
+    <tr>
+      <th scope="col">Status</th>	
+      <th scope="col">ID</th>
+      <th scope="col">User name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Setting</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<c:forEach items="${AllUsers}" var="user">
+	    <tr>
+	      <td scope="row">
+	      <c:choose>
+	      	<c:when test="${user.connected == 1}">
+		  		<img alt="" src="images/online.png">
+		  	</c:when>	  	
+		  	<c:when test="${user.connected != 1}">
+		  		<img alt="" src="images/gray-circle.png">
+		  	</c:when>
+	      </c:choose>
+	      	
+	      </td>
+	      <td >${user.idUser}</td>
+	      <td >${user.login}</td>
+	      <td >${user.email}</td>
+	      <td>
+	      	<form action="adminSetting" method="post" id="form${user.idUser}">
+	      		<input type="hidden" name="input" value="${user.idUser}">
+	      		<button name="show" class="btn btn-info"  onclick='document.getElementById("form${ user.idUser }").submit();'>Show Details</button>
+	      		<c:choose>
+	      			<c:when test="${user.blocked==0}">
+	      				<button name="block" class="btn btn-danger" onclick='document.getElementById("form${user.idUser}").submit();'>Block </button>
+	      			</c:when>
+	      			<c:when test="${user.blocked!=0}">
+	      				<button name="restart" class="btn btn-success"  onclick='document.getElementById("form${ user.idUser}").submit();'>Restart</button>
+	      			</c:when>
+	      		</c:choose>  
+	      	</form>
+	      </td>
+	    </tr>
+    </c:forEach>
+  </tbody>
+</table>	  		
+	  		

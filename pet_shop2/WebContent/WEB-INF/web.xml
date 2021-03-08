@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>pet_shop</display-name>
+ <context-param>
+        <param-name>JDBC_DRIVER</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>JDBC_URL</param-name>
+        <param-value>jdbc:mysql://bbnuuhglaanf3vdgefgr-mysql.services.clever-cloud.com:3306/bbnuuhglaanf3vdgefgr</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>JDBC_LOGIN</param-name>
+        <param-value>uw8h12hmzihayplh</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>JDBC_PASSWORD</param-name>
+        <param-value>Kiwn6rNpxKGgKxwpbIt1</param-value>
+    </context-param>
+  <welcome-file-list>
+    <welcome-file>/home</welcome-file>
+  </welcome-file-list>
+</web-app>

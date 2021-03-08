@@ -1,0 +1,13 @@
+<div class="card" style="width: 100%;">
+  <div class="card-body">
+    <h5 class="card-title">${userSelected.login}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">${userSelected.email}</h6>
+    <p class="card-text">Phone : ${userSelected.phone}</p>
+    <p class="card-text">Adress : ${userSelected.adress}</p>
+    <p class="card-text">Company : ${userSelected.company}.</p>
+    <form action="adminSetting" method="post" id="return">
+    	<input type="hidden" name="return" value="return">
+    	<a class="card-link" style="cursor: pointer;" onclick="document.getElementById('return').submit()">return to Dashboard</a>
+    </form> 
+  </div>
+</div>

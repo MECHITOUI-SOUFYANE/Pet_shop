@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+#inf{
+   color:blue;	
+   background-color: none;
+}
+.password{
+	height:20px;
+}
+.eye_account{
+position:relative;
+background-color:#4E6C4E;
+width: 2em; height: 1.9em;
+left:308px;
+}
+.eye_register{
+position:relative;
+background-color:#4E6C4E;
+width: 2em; height: 1.9em;
+left:308px;
+bottom:14px;
+}
+
+   .mask {
+  position:absolute;
+  width: 18px;
+  height: 15px;
+  left:10%;
+  top:22%;
+  border-top:solid 2px white;
+  border-radius: 100%;
+}
+
+.mask::after {
+  content:'';
+  position: absolute;
+  background-color: white;
+  border-radius: 100%;
+  width: 0.6em;
+  height: 0.6em;
+  left: 28%;
+  top: 15%;
+}
+.unmask{
+   position:absolute;
+   width: 18px;
+  height: 15px;
+  left:10%;
+  top:22%;
+  border-top:solid 2px white;
+  border-radius: 100%;
+}
+.unmask::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  border-radius: 100%;
+  width: 0.6em;
+  height: 0.6em;
+  left: 28%;
+  top: 15%;
+}
+.unmask::before {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 0.1em;
+  height: 2em;
+  left: 0.75em;
+  top: -0.6em;
+  transform: rotate(50deg);
+}
+.connection{
+	display:block;
+	position: relative;
+    min-height:50px;
+    float: left;
+	width:355px;
+    padding:25px;
+    margin:0px 0 0 15px;
+}
+.text-center{
+	text-align:center;
+	font-size: 18px;
+	font-family: inherit;
+    font-weight: 500;
+}
+.url-connection{
+	font-weight: 500;
+    font-size: 16px;
+	padding: 12px 2px 12px 2px;
+	color:white;
+	display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4E6C4E;
+}
